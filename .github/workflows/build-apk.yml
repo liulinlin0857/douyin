@@ -27,7 +27,8 @@ jobs:
       
     - name: Build APK
       run: ./gradlew assembleDebug
-      
+    - name: Setup Gradle Wrapper
+      run: bash setup-gradle.sh
     - name: Upload APK artifact
       uses: actions/upload-artifact@v4
       with:
