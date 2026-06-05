@@ -21,7 +21,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
-        
+    - name: Setup Gradle Wrapper
+      run: bash setup-gradle.sh
     - name: Make gradlew executable
       run: chmod +x ./gradlew
       
